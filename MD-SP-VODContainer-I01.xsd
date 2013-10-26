@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.cablelabs.com/namespaces/metadata/xsd/vod30/1" xmlns:core="http://www.cablelabs.com/namespaces/metadata/xsd/core/1" xmlns:offer="http://www.cablelabs.com/namespaces/metadata/xsd/offer/1" xmlns:title="http://www.cablelabs.com/namespaces/metadata/xsd/title/1" xmlns:terms="http://www.cablelabs.com/namespaces/metadata/xsd/terms/1" xmlns:content="http://www.cablelabs.com/namespaces/metadata/xsd/content/1" xmlns:signaling="http://www.cablelabs.com/namespaces/metadata/xsd/signaling/1" xmlns:ad="http://www.cablelabs.com/namespaces/metadata/xsd/ad/1" xmlns:placementopportunity="http://www.cablelabs.com/namespaces/metadata/xsd/placementopportunity/1" targetNamespace="http://www.cablelabs.com/namespaces/metadata/xsd/vod30/1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1">
+	<xsd:import namespace="http://www.cablelabs.com/namespaces/metadata/xsd/core/1" schemaLocation="MD-SP-CORE-I01.xsd"/>
+	<xsd:import namespace="http://www.cablelabs.com/namespaces/metadata/xsd/offer/1" schemaLocation="MD-SP-OFFER-I01.xsd"/>
+	<xsd:import namespace="http://www.cablelabs.com/namespaces/metadata/xsd/title/1" schemaLocation="MD-SP-TITLE-I01.xsd"/>
+	<xsd:import namespace="http://www.cablelabs.com/namespaces/metadata/xsd/terms/1" schemaLocation="MD-SP-TERMS-I01.xsd"/>
+	<xsd:import namespace="http://www.cablelabs.com/namespaces/metadata/xsd/content/1" schemaLocation="MD-SP-CONTENT-I01.xsd"/>
+	<xsd:import namespace="http://www.cablelabs.com/namespaces/metadata/xsd/signaling/1" schemaLocation="MD-SP-SIGNALING-I01.xsd"/>
+	<xsd:import namespace="http://www.cablelabs.com/namespaces/metadata/xsd/ad/1" schemaLocation="MD-SP-AD-I01.xsd"/>
+	<xsd:import namespace="http://www.cablelabs.com/namespaces/metadata/xsd/placementopportunity/1" schemaLocation="MD-SP-PLACEMENTOPPORTUNITY-D04.xsd"/>
+	<!--                               -->
+	<!-- ADI Container Type -->
+	<!--                               -->
+	<xsd:complexType name="ADIContainerType">
+		<xsd:annotation>
+			<xsd:documentation>
+			An ADI container element for holding anything.
+		</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="ContentGroup" type="offer:ContentGroupType"/>
+			<xsd:element name="Offer" type="offer:OfferType"/>
+			<xsd:element name="Title" type="title:TitleType"/>
+			<xsd:element name="Barker" type="content:BarkerType"/>
+			<xsd:element name="Movie" type="content:MovieType"/>
+			<xsd:element name="Preview" type="content:PreviewType"/>
+			<xsd:element name="BoxCover" type="content:BoxCoverType"/>
+			<xsd:element name="Thumbnail" type="content:ThumbnailType"/>
+			<xsd:element name="Poster" type="content:PosterType"/>
+			<xsd:element name="Trick" type="content:TrickType"/>
+			<xsd:element name="Terms" type="terms:TermsType"/>
+			<xsd:element name="Category" type="offer:CategoryType"/>
+			<xsd:element name="SignalGroupAsset" type="signaling:SignalGroupAssetType"/>
+			<xsd:element name="Advertisement" type="ad:AdvertisementType"/>
+			<xsd:element name="PlacementOpportunityGroup" type="placementopportunity:PlacementOpportunityGroupType"/>			
+			<xsd:element name="Ext" type="core:ExtType"/>
+		</xsd:choice>
+		<xsd:anyAttribute namespace="##any" processContents="lax"/>
+	</xsd:complexType>
+	<!--                                                                 -->
+	<!--  Elements for use in VOD30 xml documents -->
+	<!--                                                                 -->
+	<xsd:element name="ADI3" type="ADIContainerType"/>
+</xsd:schema>
