@@ -14,7 +14,7 @@ end
 
 a = MyString.new("aaaa","bbbb")
 
-p a
+puts a
 
 b = MyString.new("aaa","bbbb")
 
