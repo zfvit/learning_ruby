@@ -10,4 +10,12 @@ Finishing the test.
 This is a test.
 Writing line 2 now.
 Finishing the test.
-appending ...appending ...appending ...appending ...
+appending ...appending ...appending ...appending ...This is a test.
+Writing line 2 now.
+Finishing the test.
+This is a test.
+Writing line 2 now.
+Finishing the test.
+This is a test.
+Writing line 2 now.
+Finishing the test.

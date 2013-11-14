@@ -1,4 +1,4 @@
-(1..10).inject("aaa") { |inj, element| 
+(1..10000).inject("aaa") { |inj, element| 
 	puts " #{inj}"
 	inj = inj + " aaa "
 }

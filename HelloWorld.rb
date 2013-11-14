@@ -23,3 +23,4 @@ puts "Constructing a HelloWorld object"
 hello = HelloWorld.new("World")
 hello.sayHi
 HelloWorld.getClassField
+p File.basename $0

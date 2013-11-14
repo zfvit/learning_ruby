@@ -1,7 +1,7 @@
-class Fudeu < Exception
+class Fodeu < Exception
 end
 
-class FodeuMesmo < Fudeu
+class FodeuMesmo < Fodeu
 end
 begin
 	raise FodeuMesmo
@@ -10,6 +10,8 @@ rescue Exception
 	p "rescue Exception"
 rescue Fudeu
 	p "rescue Fudeu"
+else
+	p "else sucks"
 ensure
 	# ensure is always executed
 	p "Allahu Akbar"
